@@ -5,9 +5,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class Person {
+public final class Person {
 
-    private String id;
-    private String name;
-    private int age;
+    private final String id;
+    private final String name;
+    private final int age;
 }

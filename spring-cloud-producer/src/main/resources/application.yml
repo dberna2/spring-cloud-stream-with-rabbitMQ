@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: producer-service
+
+  cloud:
+    stream:
+      bindings:
+        exampleChannel:
+          destination: example.topic
+      default:
+        contentType: application/json
+
+  rabbitmq:
+    broker-url: tcp://127.0.0.1:5672
+    username: someuser
+    password: somepassword
+    host: localhost
