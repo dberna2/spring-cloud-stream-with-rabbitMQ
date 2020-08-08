@@ -12,6 +12,6 @@ spring:
 
   rabbitmq:
     broker-url: tcp://127.0.0.1:5672
-    username: someuser
-    password: somepassword
+    username: maikaapp
+    password: maikapass
     host: localhost
