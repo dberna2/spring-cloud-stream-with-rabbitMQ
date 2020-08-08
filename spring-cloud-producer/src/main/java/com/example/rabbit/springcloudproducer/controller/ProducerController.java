@@ -1,7 +1,7 @@
 package com.example.rabbit.springcloudproducer.controller;
 
 import com.example.rabbit.springcloudproducer.domain.Person;
-import com.example.rabbit.springcloudproducer.publisher.channel.IExampleChannelPublisher;
+import com.example.rabbit.springcloudproducer.publisher.channel.IExamplePublisherChannel;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class ProducerController {
 
-    private final IExampleChannelPublisher publisher;
+    private final IExamplePublisherChannel publisher;
 
     @PostMapping
     public ResponseEntity<Void> getAllUserById(@RequestBody Person person) {

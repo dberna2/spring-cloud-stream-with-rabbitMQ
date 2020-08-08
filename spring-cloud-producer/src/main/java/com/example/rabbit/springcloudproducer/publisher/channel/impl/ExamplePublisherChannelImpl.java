@@ -1,8 +1,8 @@
 package com.example.rabbit.springcloudproducer.publisher.channel.impl;
 
 import com.example.rabbit.springcloudproducer.domain.Person;
-import com.example.rabbit.springcloudproducer.publisher.channel.IExampleChannelPublisher;
-import com.example.rabbit.springcloudproducer.publisher.annotations.ExampleChannel;
+import com.example.rabbit.springcloudproducer.publisher.channel.IExamplePublisherChannel;
+import com.example.rabbit.springcloudproducer.publisher.annotations.ExampleOutputChannel;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-@EnableBinding(ExampleChannel.class)
+@EnableBinding(ExampleOutputChannel.class)
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class ExampleChannelPublisherImpl implements IExampleChannelPublisher {
+public class ExamplePublisherChannelImpl implements IExamplePublisherChannel {
 
-    private final ExampleChannel source;
+    private final ExampleOutputChannel source;
 
     @Override
     public void sendMessage(Person person) {
