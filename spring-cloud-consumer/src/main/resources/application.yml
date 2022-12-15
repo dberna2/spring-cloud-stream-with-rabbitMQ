@@ -1,1 +1,16 @@
+spring:
+  application:
+    name: consumer-service
 
+  cloud:
+    stream:
+      bindings:
+        exampleChannel:
+          destination: example.topic
+          group: myqueue
+
+  rabbitmq:
+    broker-url: tcp://127.0.0.1:5672
+    username: maikaapp
+    password: maikapass
+    host: localhost
